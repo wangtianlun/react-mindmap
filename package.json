@@ -1,0 +1,51 @@
+{
+  "name": "react-mindmap",
+  "version": "1.0.0",
+  "main": "dist/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangtianlun/react-mindmap.git"
+  },
+  "author": {
+    "name": "王天伦",
+    "email": "chongxinkaishi8188@gmail.com"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --config ./config/webpack.config.example.dev.js --open",
+    "watch": "node --max_old_space_size=8192 ./node_modules/webpack/bin/webpack --config ./config/webpack.config.dev.js --watch",
+    "build": "NODE_ENV=production node --max_old_space_size=8192 ./node_modules/webpack/bin/webpack --config ./config/webpack.config.prod.js --colors --profile --optimize-minimize",
+    "build:example": "NODE_ENV=production node --max_old_space_size=8192 ./node_modules/webpack/bin/webpack --config ./config/webpack.config.example.prod.js --colors --profile --optimize-minimize"
+  },
+  "dependencies": {
+    "kity": "^2.0.4",
+    "kityminder-core": "^1.4.50"
+  },
+  "devDependencies": {
+    "antd": "^3.8.0",
+    "autoprefixer": "^8.2.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "moment": "^2.22.2",
+    "postcss-loader": "^2.1.3",
+    "precss": "^3.1.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
