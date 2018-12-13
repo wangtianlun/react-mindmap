@@ -1,5 +1,9 @@
-const a = 1;
+import Toolbar from '@components/Toolbar';
+import Editor from '@components/Editor';
+import Command from '@components/Command';
 
-console.log(window.kityminder)
-
-export default a;
+export {
+  Toolbar,
+  Editor,
+  Command,
+};
