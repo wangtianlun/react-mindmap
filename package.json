@@ -16,12 +16,8 @@
     "build": "NODE_ENV=production node --max_old_space_size=8192 ./node_modules/webpack/bin/webpack --config ./config/webpack.config.prod.js --colors --profile --optimize-minimize",
     "build:example": "NODE_ENV=production node --max_old_space_size=8192 ./node_modules/webpack/bin/webpack --config ./config/webpack.config.example.prod.js --colors --profile --optimize-minimize"
   },
-  "dependencies": {
-    "kity": "^2.0.4",
-    "kityminder-core": "^1.4.50"
-  },
   "devDependencies": {
-    "antd": "^3.8.0",
+    "antd": "^3.20.5",
     "autoprefixer": "^8.2.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
