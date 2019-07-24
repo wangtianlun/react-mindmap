@@ -3,7 +3,7 @@ const { merge } = require('lodash');
 const baseConfig = require('./webpack.config.base');
 
 const entry = {
-  bundle: path.resolve(__dirname, '..', 'src/index.js'),
+  bundle: path.resolve(__dirname, '..', 'src/index.ts'),
 };
 
 const devtool = 'cheap-module-eval-source-map';
@@ -16,6 +16,7 @@ const output = {
 };
 
 module.exports = merge(baseConfig, {
+  mode: 'development',
   entry,
   devtool,
   output,

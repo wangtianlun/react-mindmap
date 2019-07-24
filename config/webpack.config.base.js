@@ -11,6 +11,12 @@ const rules = [{
     loader: 'babel-loader',
   },
 }, {
+  test: /\.tsx?$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'ts-loader',
+  }
+}, {
   test: /\.scss$/,
   use: [{
     loader: 'style-loader',
@@ -57,6 +63,8 @@ const alias = {
   '@utils': path.resolve(__dirname, '..', 'src/utils'),
 };
 
+const extensions = [".tsx", ".ts", ".js", ".json"];
+
 const externals = {
   react: {
     root: 'React',
@@ -73,6 +81,7 @@ module.exports = {
   plugins,
   resolve: {
     alias,
+    extensions,
   },
   externals,
 };

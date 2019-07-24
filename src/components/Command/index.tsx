@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
-export default class Command extends Component {
+interface IProps {
+  children: any;
+  name: string;
+}
+
+export default class Command extends Component<IProps, {}> {
   render() {
     const { children, name } = this.props;
 

@@ -3,13 +3,14 @@ import EditorContext from '../../common/context/EditorContext';
 import { Divider } from 'antd';
 import styles from './index.scss';
 import Icon from '../../common/Iconfont';
+import { Minder } from '../Editor'
 
 export default class Toolbar extends React.Component {
-  handleClick = (minder) => {
+  handleClick = (minder: Minder) => {
     minder.execCommand('AppendChildNode', '子节点');
   }
 
-  renderCommandSet(minder) {
+  renderCommandSet(minder: Minder) {
     return (<>
       <div className={styles.command} onClick={this.handleClick.bind(this, minder)} data-command="undo">
         <Icon type="undo"/>
@@ -25,14 +26,13 @@ export default class Toolbar extends React.Component {
     return (
       <EditorContext.Consumer>
         {
-          ({ minder }) => (
+          (minder) => (
             <div className={styles.toolbar}>
               { this.renderCommandSet(minder) }
             </div>
           )
         }
       </EditorContext.Consumer>
-      
     )
   }
 }
